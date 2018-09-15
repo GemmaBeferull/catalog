@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 import "./mobiles.css";
 
@@ -10,18 +11,14 @@ class Mobiles extends Component {
     };
   }
   componentDidMount() {
-    fetch("/api/phones")
-      .then(res => res.json())
-      .then(mobiles =>
-        this.setState({ mobiles }, () =>
-          console.log("mobiles fetched...", mobiles)
-        )
-      );
+    axios
+      .get("/api/phones")
+      .then(res => res.data)
+      .then(mobiles => this.setState({ mobiles }));
   }
   render() {
     return (
       <div>
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <h1>Mobiles Component</h1>
         <ul>
           {this.state.mobiles.map(mobile => (

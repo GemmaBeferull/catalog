@@ -14,7 +14,7 @@ app.get("/api/phones", (req, res) => {
     },
     {
       title: "Samsung Galaxy S7",
-      imagesrc: "./client/src/images/Samsung-Galaxy-S7.jpg",
+      imagesrc: "./images/Samsung-Galaxy-S7.jpg",
       color: "black",
       description:
         "Samsung Galaxy S7 / G930F / G930FD 5.1 inch Android 6.0 Ram",
