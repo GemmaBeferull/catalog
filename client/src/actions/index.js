@@ -1,12 +1,10 @@
 import axios from "axios";
-export function hola() {
-  return dispatch =>
-    axios
-      .get("/api/phones")
-      .then(res => res.json())
-      .then(mobiles =>
-        this.setState({ mobiles }, () =>
-          console.log("mobiles fetched...", mobiles)
-        )
-      );
+export const SHOW_PHONES = "SHOW_PHONES";
+
+export function showPhones() {
+  return (dispatch, getState) => {
+    axios.get("/api/phones").then(response => {
+      dispatch({ type: SHOW_PHONES, payload: response.data });
+    });
+  };
 }
