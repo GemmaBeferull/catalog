@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { showPhones, moreDetails } from "../../actions";
 import PhoneDetailComponent from "../PhoneDetailComponent/PhoneDetailComponent";
+import Spinner from "../spinner/spinner";
 
 import "./PhoneListContainer.css";
 
@@ -17,23 +18,22 @@ class PhoneListContainer extends Component {
   handleClick(event) {
     this.props.moreDetails(event);
   }
-  renderUsersList() {
-    return this.props.phones.map(phone => {
-      return (
-        <li key={phone.title} onClick={this.handleClick} className="acordion">
-          <h2>{phone.title}</h2>
-          <img src={phone.imagesrc} alt={phone.title} />
-          <PhoneDetailComponent description={phone.description} />
-        </li>
-      );
-    });
-  }
 
   render() {
     return (
       <div>
         <h1>Mobiles Catalog</h1>
-        <ul>{this.renderUsersList()}</ul>
+        {this.props.spinner ? <Spinner /> : null}
+
+        <ul>
+          {this.props.phones.map(phone => (
+            <li key={phone.title} onClick={this.handleClick}>
+              <h2>{phone.title}</h2>
+              <img src={phone.imagesrc} alt={phone.title} />
+              <PhoneDetailComponent description={phone.description} />
+            </li>
+          ))}
+        </ul>
       </div>
     );
   }
@@ -41,7 +41,8 @@ class PhoneListContainer extends Component {
 function mapStateToProps(state) {
   return {
     phones: state.phone.list,
-    hidden: state.hide.hidden
+    hidden: state.hide.hidden,
+    spinner: state.phone.spinner
   };
 }
 
