@@ -22,7 +22,6 @@ class PhoneListContainer extends Component {
   render() {
     return (
       <div>
-        <h1>Mobiles Catalog</h1>
         {this.props.spinner ? <Spinner /> : null}
 
         <ul>
@@ -30,7 +29,11 @@ class PhoneListContainer extends Component {
             <li key={phone.title} onClick={this.handleClick}>
               <h2>{phone.title}</h2>
               <img src={phone.imagesrc} alt={phone.title} />
-              <PhoneDetailComponent description={phone.description} />
+              <PhoneDetailComponent
+                description={phone.description}
+                price={phone.price}
+                color={phone.color}
+              />
             </li>
           ))}
         </ul>

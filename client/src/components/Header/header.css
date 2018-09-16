@@ -1,0 +1,13 @@
+.header {
+  width: 100vw;
+  height: 15vh;
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.header_text {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}

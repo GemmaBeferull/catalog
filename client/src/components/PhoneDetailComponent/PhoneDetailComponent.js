@@ -6,6 +6,8 @@ class PhoneDetailComponent extends Component {
     return (
       <div className="acordion hidden">
         <p className="details">{this.props.description}</p>
+        <p className="details">{this.props.price}</p>
+        <p className="details">{this.props.color}</p>
       </div>
     );
   }
