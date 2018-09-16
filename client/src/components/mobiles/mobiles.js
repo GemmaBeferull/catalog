@@ -1,43 +1,35 @@
 import React, { Component } from "react";
-// import axios from "axios";
 import { connect } from "react-redux";
-import { showPhones } from "../../actions";
+import { showPhones, moreDetails } from "../../actions";
 
 import "./mobiles.css";
 
-// const onClickListener = event => {
-//   const hideinfo = document.querySelectorAll("p");
-//   hideinfo.forEach(item => {
-//     item.classList.remove("hidden");
-//   });
-// };
-
 class Mobiles extends Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     mobiles: []
-  //   };
-  // }
-  // componentDidMount() {
-  //   axios
-  //     .get("/api/phones")
-  //     .then(res => res.data)
-  //     .then(mobiles => this.setState({ mobiles }));
-  // }
+  constructor() {
+    super();
+    this.handleClick = this.handleClick.bind(this);
+  }
 
   componentWillMount() {
+    console.log(this);
     this.props.showPhones();
+  }
+  handleClick(event) {
+    console.log(this);
+    this.props.moreDetails(event);
   }
   renderUsersList() {
     return this.props.phones.map(phone => {
       return (
-        <li key={phone.title}>
-          <h2>{phone.title}</h2>{" "}
+        <li key={phone.title} onClick={this.handleClick}>
+          <h2>{phone.title}</h2>
+          <img src={phone.imagesrc} alt={phone.title} />
+          <p className="details">{phone.description}</p>
         </li>
       );
     });
   }
+
   render() {
     return (
       <div>
@@ -49,11 +41,12 @@ class Mobiles extends Component {
 }
 function mapStateToProps(state) {
   return {
-    phones: state.phone.list
+    phones: state.phone.list,
+    hidden: state.hide.hidden
   };
 }
 
 export default connect(
   mapStateToProps,
-  { showPhones }
+  { showPhones, moreDetails }
 )(Mobiles);
