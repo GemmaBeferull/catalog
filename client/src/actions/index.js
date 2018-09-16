@@ -12,7 +12,7 @@ export function showPhones() {
 
 export function moreDetails(event) {
   return (dispatch, getState) => {
-    const selectedItem = event.currentTarget.remove("hidden");
+    const selectedItem = (event.currentTarget.style.color = "red");
     dispatch({ type: MORE_DETAILS, payload: selectedItem });
   };
 }

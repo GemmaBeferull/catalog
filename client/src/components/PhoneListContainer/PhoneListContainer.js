@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { showPhones, moreDetails } from "../../actions";
+import PhoneDetailComponent from "../PhoneDetailComponent/PhoneDetailComponent";
 
 import "./PhoneListContainer.css";
 
@@ -19,10 +20,10 @@ class PhoneListContainer extends Component {
   renderUsersList() {
     return this.props.phones.map(phone => {
       return (
-        <li key={phone.title} onClick={this.handleClick}>
+        <li key={phone.title} onClick={this.handleClick} className="acordion">
           <h2>{phone.title}</h2>
           <img src={phone.imagesrc} alt={phone.title} />
-          <p className="details">{phone.description}</p>
+          <PhoneDetailComponent description={phone.description} />
         </li>
       );
     });
