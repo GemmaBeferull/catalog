@@ -8,6 +8,7 @@ img {
 .phoneListContainer {
   list-style: none;
   min-height: 100vh;
+  padding-bottom: 55px;
 }
 li {
   position: relative;
@@ -18,10 +19,11 @@ li {
   padding-top: 60px;
   padding-bottom: 20px;
 }
+
 @media (min-width: 500px) {
   .phoneListContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   img {

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import PhoneListContainer from "./components/PhoneListContainer/PhoneListContainer";
 import Header from "./components/Header/header";
+import Footer from "./components/Footer/Footer";
 
 class App extends Component {
   render() {
@@ -9,6 +10,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <PhoneListContainer />
+        <Footer />
       </div>
     );
   }
