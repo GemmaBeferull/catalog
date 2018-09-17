@@ -6,7 +6,7 @@ app.get("/api/phones", (req, res) => {
   const phones = [
     {
       id: 1,
-      title: "SAMSUNG GALAXY J5 2017",
+      title: "SAMSUNG J5",
       imagesrc: "https://tarifas.masmovil.es/img/samsung-j5.png",
       color: "Black",
       description: "Con la tarifa de Fibra + Móvil 12GB",
@@ -30,7 +30,7 @@ app.get("/api/phones", (req, res) => {
     },
     {
       id: 4,
-      title: "SAMSUNG GALAXY J5 2017",
+      title: "SAMSUNG",
       imagesrc: "https://tarifas.masmovil.es/img/samsung-j5.png",
 
       color: "Black",

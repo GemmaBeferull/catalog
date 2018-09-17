@@ -5,10 +5,16 @@ class PhoneDetailComponent extends Component {
   render() {
     return (
       <div className="detailsContainer hidden">
-        <img src={this.props.imagesrc} alt={this.props.title} />
-        <p className="details">{this.props.description}</p>
-        <p className="details">{this.props.price}</p>
-        <p className="details">{this.props.color}</p>
+        <img
+          className="detailImage"
+          src={this.props.imagesrc}
+          alt={this.props.title}
+        />
+        <div className="details">
+          <p className="description">{this.props.description}</p>
+          <p className="price">{this.props.price}</p>
+          <p className="color">{this.props.color}</p>
+        </div>
       </div>
     );
   }

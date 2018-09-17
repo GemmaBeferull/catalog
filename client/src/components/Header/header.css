@@ -3,7 +3,8 @@
   width: 100vw;
   height: 15vh;
   border-bottom: 2px solid #ffe900;
-  z-index: 3;
+  z-index: 1;
+  background-color: black;
 }
 
 .header_text {

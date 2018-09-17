@@ -1,10 +1,30 @@
+.detailsContainer {
+  background-color: black;
+  position: absolute;
+  color: white;
+  top: 98px;
+  display: flex;
+  padding: 27px;
+}
+
+.detailImage {
+  padding: 10px;
+}
+.details {
+  padding: 10px;
+  margin-top: 40px;
+}
+.details p {
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
 .hidden {
   display: none;
 }
-.detailsContainer {
-  height: 40vh;
-  background-color: white;
-  color: white;
-  position: relative;
-  top: -35vh;
+
+@media (min-width: 500px) {
+  .detailImage {
+    max-width: 50px;
+  }
 }
