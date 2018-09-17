@@ -1,13 +1,17 @@
 .header {
+  position: fixed;
   width: 100vw;
   height: 15vh;
-  background-color: yellow;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
+  border-bottom: 2px solid #ffe900;
+  z-index: 3;
 }
 
 .header_text {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  color: #ffe900;
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: 25px;
+}
+span {
+  color: white;
 }

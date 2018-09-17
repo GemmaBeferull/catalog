@@ -21,18 +21,19 @@ class PhoneListContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div className="phoneList">
         {this.props.spinner ? <Spinner /> : null}
 
-        <ul>
+        <ul className="phoneListContainer">
           {this.props.phones.map(phone => (
-            <li key={phone.title} onClick={this.handleClick}>
-              <h2>{phone.title}</h2>
+            <li key={phone.id} onClick={this.handleClick}>
+              <h2 className="title">{phone.title}</h2>
               <img src={phone.imagesrc} alt={phone.title} />
               <PhoneDetailComponent
                 description={phone.description}
                 price={phone.price}
                 color={phone.color}
+                imagesrc={phone.imagesrc}
               />
             </li>
           ))}

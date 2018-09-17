@@ -4,7 +4,8 @@ import "./PhoneDetailComponent.css";
 class PhoneDetailComponent extends Component {
   render() {
     return (
-      <div className="acordion hidden">
+      <div className="detailsContainer hidden">
+        <img src={this.props.imagesrc} alt={this.props.title} />
         <p className="details">{this.props.description}</p>
         <p className="details">{this.props.price}</p>
         <p className="details">{this.props.color}</p>

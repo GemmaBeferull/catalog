@@ -5,22 +5,53 @@ const app = express();
 app.get("/api/phones", (req, res) => {
   const phones = [
     {
-      title: "iPhone 7",
-      imagesrc:
-        "https://www.ishopperu.com.pe/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/i/p/iphone-7--space-grey.jpg",
-
-      color: "black",
-      description: "Apple 7 Teléfono inteligente 4G - Pantalla Retina HD",
-      price: "500€"
+      id: 1,
+      title: "SAMSUNG GALAXY J5 2017",
+      imagesrc: "https://tarifas.masmovil.es/img/samsung-j5.png",
+      color: "Black",
+      description: "Con la tarifa de Fibra + Móvil 12GB",
+      price: "Gratis"
     },
     {
-      title: "Samsung Galaxy S7",
-      imagesrc:
-        "https://www.aca-electronic.com/60-thickbox_default/samsung-galaxy-s7-edge-g935f-55-inch-rom-32gb-lte-ram-4gb.jpg",
-      color: "black",
-      description:
-        "Samsung Galaxy S7 / G930F / G930FD 5.1 inch Android 6.0 Ram",
-      price: "300€"
+      id: 2,
+      title: "Alcatel U5",
+      imagesrc: "https://tarifas.masmovil.es/img/alcatel-U5.jpg",
+      color: "Black",
+      description: "Con tarifas de Fibra + Móvil",
+      price: "Gratis"
+    },
+    {
+      id: 3,
+      title: "LG K9",
+      imagesrc: "https://tarifas.masmovil.es/img/k9.jpg",
+      color: "Black",
+      description: "Con tarifas de Fibra + Móvil 8GB",
+      price: "Gratis€"
+    },
+    {
+      id: 4,
+      title: "SAMSUNG GALAXY J5 2017",
+      imagesrc: "https://tarifas.masmovil.es/img/samsung-j5.png",
+
+      color: "Black",
+      description: "Con la tarifa de Fibra + Móvil 12GB",
+      price: "Gratis"
+    },
+    {
+      id: 5,
+      title: "Alcatel U5",
+      imagesrc: "https://tarifas.masmovil.es/img/alcatel-U5.jpg",
+      color: "Black",
+      description: "Con tarifas de Fibra + Móvil",
+      price: "Gratis"
+    },
+    {
+      id: 6,
+      title: "LG K9",
+      imagesrc: "https://tarifas.masmovil.es/img/k9.jpg",
+      color: "Black",
+      description: "Con tarifas de Fibra + Móvil 8GB",
+      price: "Gratis€"
     }
   ];
 

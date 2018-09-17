@@ -2,19 +2,19 @@ import axios from "axios";
 export const SHOW_PHONES = "SHOW_PHONES";
 export const MORE_DETAILS = "MORE_DETAILS ";
 
-export function showPhones() {
+export const showPhones = () => {
   return (dispatch, getState) => {
     axios.get("/api/phones").then(response => {
       dispatch({ type: SHOW_PHONES, payload: response.data });
     });
   };
-}
+};
 
-export function moreDetails(event) {
+export const moreDetails = event => {
   return (dispatch, getState) => {
     const selectedItem = event.currentTarget
-      .querySelector(".acordion")
+      .querySelector(".detailsContainer")
       .classList.toggle("hidden");
     dispatch({ type: MORE_DETAILS, payload: selectedItem });
   };
-}
+};

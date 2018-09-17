@@ -5,7 +5,11 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-        <p className="header_text">MOBILE CATALOG</p>
+        <h1 className="header_text">
+          MOB
+          <span>!</span>
+          LE CATALOG
+        </h1>
       </div>
     );
   }
