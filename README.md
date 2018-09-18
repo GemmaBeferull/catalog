@@ -56,7 +56,7 @@ npm start
 - Run the server:
 
 ```
-  npm run server
+ sudo docker run -it -p 8000:5000 catalog-docker
 ```
 
 - Run the client:
