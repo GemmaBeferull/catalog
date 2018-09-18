@@ -36,19 +36,37 @@ Bonus Points
 ## Dependencies to Run the App
 
 - Install dependencies for server:
-  npm install
+
+```
+npm start
+```
 
 - Install dependencies for client:
+
+```
   npm run client-install
+```
 
 - Install react and react-redux:
+
+```
   npm install --save redux
+```
 
 - Run the server:
+
+```
   npm run server
+```
 
 - Run the client:
+
+```
   cd client
-  npm start
+```
+
+```
+npm start
+```
 
 Server runs on http://localhost:5000 and client on http://localhost:3000
